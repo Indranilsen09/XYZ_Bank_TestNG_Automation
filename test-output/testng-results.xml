@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-13T19:30:31 IST" name="Default suite" finished-at="2024-03-13T19:30:50 IST" duration-ms="19883">
+  <suite started-at="2024-03-13T20:56:54 IST" name="Default suite" finished-at="2024-03-13T20:57:15 IST" duration-ms="21171">
     <groups>
     </groups>
-    <test started-at="2024-03-13T19:30:31 IST" name="Default test" finished-at="2024-03-13T19:30:50 IST" duration-ms="19883">
+    <test started-at="2024-03-13T20:56:54 IST" name="Default test" finished-at="2024-03-13T20:57:15 IST" duration-ms="21171">
       <class name="Login_Functionality.LoginTest">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:Login_Functionality.LoginTest@3270d194]" started-at="2024-03-13T19:30:31 IST" name="Setup" finished-at="2024-03-13T19:30:32 IST" duration-ms="1481" status="PASS">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:Login_Functionality.LoginTest@3270d194]" started-at="2024-03-13T20:56:54 IST" name="Setup" finished-at="2024-03-13T20:56:56 IST" duration-ms="1803" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="TestLogin()[pri:0, instance:Login_Functionality.LoginTest@3270d194]" started-at="2024-03-13T19:30:32 IST" name="TestLogin" finished-at="2024-03-13T19:30:50 IST" duration-ms="18091" status="PASS">
+        <test-method signature="TestLogin()[pri:0, instance:Login_Functionality.LoginTest@3270d194]" started-at="2024-03-13T20:56:56 IST" name="TestLogin" finished-at="2024-03-13T20:57:15 IST" duration-ms="18995" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestLogin -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:Login_Functionality.LoginTest@3270d194]" started-at="2024-03-13T19:30:50 IST" name="TearDown" finished-at="2024-03-13T19:30:50 IST" duration-ms="274" status="PASS">
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:Login_Functionality.LoginTest@3270d194]" started-at="2024-03-13T20:57:15 IST" name="TearDown" finished-at="2024-03-13T20:57:15 IST" duration-ms="321" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->

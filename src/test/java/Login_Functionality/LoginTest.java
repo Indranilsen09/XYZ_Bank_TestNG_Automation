@@ -8,9 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.*;
-import org.testng.annotations.Test;
 
 import Helpers.ReadProperties;
 import Helpers.WebDriverHelper;
@@ -19,6 +17,7 @@ import WebMethods.PageMethods;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import reusableMethods.ReusableMethods;
 
+@Listeners(listeners.Listeners.class)
 public class LoginTest 
 {
 	
@@ -54,7 +53,7 @@ public class LoginTest
 		browser.click(btn_login);
 		bot.waitforSeconds(5);
 		bot.takescreenshot(driver);
-		browser.click(btn_logout);
+		
 		
 	
 	}
@@ -62,6 +61,7 @@ public class LoginTest
 	@AfterTest
 	public void TearDown() 
 	{
+		browser.click(btn_logout);
 		WebDriverHelper.CloseDriver();
 		System.out.println("Browser Closed");
 	}
