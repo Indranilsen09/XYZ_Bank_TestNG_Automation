@@ -2,7 +2,9 @@ package WebMethods;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 public class PageMethods 
@@ -44,14 +46,30 @@ public class PageMethods
 	}
 	}
 	
-	public void enterText(By by,String text) 
+	public void enterText(By by,String text)
 	{
 		try {
-			driver.findElement(by).sendKeys(text);
+			Actions act = new Actions(driver);
+			WebElement element = driver.findElement(by);
+			element.click();
+			act.moveToElement(element).click().sendKeys(text).build().perform();
 			
 		}catch(Exception e) 
 		{
 			e.printStackTrace();
 		}
+	}
+	
+	public String getText(By by) 
+	{
+		String text="";
+		try {
+			text= driver.findElement(by).getText();
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return text;
+		
 	}
 }
