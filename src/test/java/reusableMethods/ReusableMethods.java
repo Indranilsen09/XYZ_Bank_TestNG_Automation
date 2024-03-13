@@ -34,12 +34,12 @@ public class ReusableMethods
 		}
 		
 	}
-	public static void takescreenshot() throws InterruptedException
+	public static void takescreenshot(WebDriver driver1) throws InterruptedException
 	{
 		try {
 			TakesScreenshot ss = ((TakesScreenshot)driver);
 			File srcFile = ss.getScreenshotAs(OutputType.FILE);
-			File destFile = new File("/Screenshots/"+"ScreenshotNum"+sscount+".png");
+			File destFile = new File("/Screenshots/"+"screenshot"+sscount+".png");
 			sscount++;
 			FileUtils.copyFile(srcFile, destFile);
 			Thread.sleep(2000);

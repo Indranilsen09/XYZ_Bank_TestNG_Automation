@@ -46,14 +46,14 @@ public class LoginTest
 		
 		browser.navigateTo(url);
 		bot.waitforElement(Cx_login, 3);
-		bot.takescreenshot();
+		bot.takescreenshot(driver);
 		browser.click(Cx_login);
 		bot.waitforSeconds(4);
 		browser.Select(slt_user, "Harry Potter");
 		bot.waitforSeconds(2);
 		browser.click(btn_login);
 		bot.waitforSeconds(5);
-		bot.takescreenshot();
+		bot.takescreenshot(driver);
 		browser.click(btn_logout);
 		
 	
