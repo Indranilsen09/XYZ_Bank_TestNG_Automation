@@ -52,7 +52,8 @@ public class PageMethods
 			Actions act = new Actions(driver);
 			WebElement element = driver.findElement(by);
 			element.click();
-			act.moveToElement(element).click().sendKeys(text).build().perform();
+			Thread.sleep(1000);
+			act.sendKeys(element, text).build().perform();
 			
 		}catch(Exception e) 
 		{

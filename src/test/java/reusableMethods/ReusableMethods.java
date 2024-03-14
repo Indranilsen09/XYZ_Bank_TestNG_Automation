@@ -39,7 +39,7 @@ public class ReusableMethods
 		try {
 			TakesScreenshot ss = ((TakesScreenshot)driver);
 			File srcFile = ss.getScreenshotAs(OutputType.FILE);
-			File destFile = new File("/Screenshots/"+"screenshot"+sscount+".png");
+			File destFile = new File(System.getProperty("user.dir")+"/Screenshots/"+"screenshot"+sscount+".png");
 			sscount++;
 			FileUtils.copyFile(srcFile, destFile);
 			Thread.sleep(2000);

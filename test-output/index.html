@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Login_Functionality.LoginTest" class="method navigator-link" hash-for-method="Deposit">Deposit</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -118,6 +104,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="Login_Functionality.LoginTest" class="method navigator-link" hash-for-method="BalanceCheck">BalanceCheck</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Login_Functionality.LoginTest" class="method navigator-link" hash-for-method="Deposit">Deposit</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -137,30 +128,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">Login_Functionality.LoginTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="Deposit">
-                  </a> <!-- Deposit -->
-                  <span class="method-name">Deposit</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [Deposit Successful] but found []
-	at Login_Functionality.LoginTest.Deposit(LoginTest.java:99)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 19 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -172,6 +139,13 @@
                   <a name="BalanceCheck">
                   </a> <!-- BalanceCheck -->
                   <span class="method-name">BalanceCheck</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Deposit">
+                  </a> <!-- Deposit -->
+                  <span class="method-name">Deposit</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -197,6 +171,7 @@
     &lt;listener class-name=&quot;listeners.Listeners&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; parallel=&quot;classes&quot; name=&quot;Test&quot;&gt;
+    &lt;parameter name=&quot;browserName&quot; value=&quot;edge&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;Login_Functionality.LoginTest&quot;/&gt;
     &lt;/classes&gt;
@@ -240,22 +215,22 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Login')
+data.setCell(0, 1, 'Deposit')
 data.setCell(0, 2, 'Login_Functionality.LoginTest')
-data.setCell(0, 3, 17978);
+data.setCell(0, 3, 25962);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'Deposit')
+data.setCell(1, 1, 'Login')
 data.setCell(1, 2, 'Login_Functionality.LoginTest')
-data.setCell(1, 3, 15534);
+data.setCell(1, 3, 18028);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'BalanceCheck')
 data.setCell(2, 2, 'Login_Functionality.LoginTest')
-data.setCell(2, 3, 7291);
+data.setCell(2, 3, 7322);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 40 seconds</span>
+              <span class="suite-total-time">Total running time: 51 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -283,26 +258,24 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">Login_Functionality.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">Setup</span>
+                <span class="method-name">Setup(edge)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">Login</span>
-                <span class="method-start">1626 ms</span>
+                <span class="method-start">1883 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">BalanceCheck</span>
-                <span class="method-start">19614 ms</span>
+                <span class="method-start">19918 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">Deposit</span>
-                <span class="method-start">26910 ms</span>
+                <span class="method-start">27240 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">TearDown</span>
-                <span class="method-start">42450 ms</span>
+                <span class="method-start">53204 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

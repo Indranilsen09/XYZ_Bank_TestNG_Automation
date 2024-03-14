@@ -5,10 +5,13 @@
     <listener class-name="listeners.Listeners"/>
   </listeners>
   <test thread-count="5" parallel="classes" name="Test(failed)">
+    <parameter name="browserName" value="edge"/>
     <classes>
       <class name="Login_Functionality.LoginTest">
         <methods>
           <include name="Setup"/>
+          <include name="BalanceCheck"/>
+          <include name="Login"/>
           <include name="Deposit"/>
           <include name="TearDown"/>
         </methods>

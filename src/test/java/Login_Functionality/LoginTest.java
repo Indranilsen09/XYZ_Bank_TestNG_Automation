@@ -33,10 +33,11 @@ public class LoginTest
 	static ReusableMethods bot;
 	  static GlobalVariables glovar;
 	
+	@Parameters("browserName")
 	@BeforeTest
-	public void Setup() 
+	public void Setup(String browserName) 
 	{
-		 driver = WebDriverHelper.getDriver();
+		 driver = WebDriverHelper.getDriver(browserName);
 		 by = new XYZLocators();
 		 browser = new PageMethods(driver);
 		 url = ReadProperties.getProperty("xyzbank");
@@ -87,11 +88,14 @@ public class LoginTest
 	{
 		browser.click(by.btn_deposit);
 		bot.waitforSeconds(5);
-		if(glovar.AccountBalance=="0") 
+		if(glovar.AccountBalance.equals("0")) 
 		{
+			System.out.println("Inside method");
 			browser.enterText(by.txt_Amount,"10000");
 			bot.takescreenshot(driver);
 			bot.waitforSeconds(5);
+		}else {
+			System.out.println("Outside");
 		}
 		browser.click(by.btn_depAmnt);
 		bot.waitforSeconds(5);
@@ -104,6 +108,7 @@ public class LoginTest
 	public void TearDown() 
 	{
 		browser.click(by.btn_logout);
+		bot.waitforSeconds(5);
 		WebDriverHelper.CloseDriver();
 		System.out.println("Browser Closed");
 	}
