@@ -6,6 +6,8 @@
       <class name="Login_Functionality.LoginTest">
         <methods>
           <include name="Setup"/>
+          <include name="BalanceCheck"/>
+          <include name="Login"/>
           <include name="Deposit"/>
           <include name="TearDown"/>
         </methods>

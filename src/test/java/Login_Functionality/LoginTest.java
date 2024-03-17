@@ -90,12 +90,11 @@ public class LoginTest
 		bot.waitforSeconds(5);
 		if(glovar.AccountBalance.equals("0")) 
 		{
-			System.out.println("Inside method");
 			browser.enterText(by.txt_Amount,"10000");
 			bot.takescreenshot(driver);
 			bot.waitforSeconds(5);
 		}else {
-			System.out.println("Outside");
+			System.out.println("Account balance is Not Zero");
 		}
 		browser.click(by.btn_depAmnt);
 		bot.waitforSeconds(5);
