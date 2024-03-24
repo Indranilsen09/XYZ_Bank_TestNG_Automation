@@ -28,7 +28,7 @@ public class WebDriverHelper
 			driver = new EdgeDriver();
 		}
 		
-	
+		System.out.println(browser + " driver started");
 
 		//WebDriverManager.chromedriver().setup();
 		driver.manage().window().maximize();
