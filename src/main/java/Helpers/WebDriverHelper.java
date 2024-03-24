@@ -38,7 +38,7 @@ public class WebDriverHelper
 	public static void CloseDriver() 
 	{
 		driver.manage().deleteAllCookies();
-		driver.close();
+		//driver.close();
 		driver.quit();
 		
 	}
