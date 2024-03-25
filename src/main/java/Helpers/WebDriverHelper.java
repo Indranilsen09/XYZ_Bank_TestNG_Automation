@@ -29,7 +29,7 @@ public class WebDriverHelper
 		}
 		
 		System.out.println(browser + " driver started");
-
+		System.out.println("Testing Jenkins");
 		//WebDriverManager.chromedriver().setup();
 		driver.manage().window().maximize();
 		return driver;
