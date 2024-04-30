@@ -1,0 +1,10 @@
+name: XYZ Build Automation
+on:
+    workflow_dispatch:
+jobs:
+    build:
+        name: Building XYZ Automation
+        runs-on: ubuntu-latest
+        steps:
+        - name: Executing Maven Build
+          run: mvn clean test -Dtestngfile=testng.xml
