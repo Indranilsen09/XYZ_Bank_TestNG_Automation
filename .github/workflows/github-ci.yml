@@ -1,10 +1,22 @@
-name: XYZ Build Automation
+name: Maven Build
 on:
-    workflow_dispatch:
+  push:
+    branches:
+      - main
 jobs:
-    build:
-        name: Building XYZ Automation
-        runs-on: ubuntu-latest
-        steps:
-        - name: Executing Maven Build
-          run: mvn clean test -Dtestngfile=testng.xml
+  build:
+    name: "Maven Build"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout Sources"
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+      - name: "Set up JDK"
+        uses: actions/setup-java@v2
+        with:
+          distribution: "temurin"
+          java-version: 11
+          cache: "maven"
+      - name: "Build with Maven"
+        run: mvn verify
